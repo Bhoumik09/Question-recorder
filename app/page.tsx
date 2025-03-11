@@ -33,7 +33,6 @@ export default function Home() {
   const [submittedData, setSubmittedData] = useState<z.infer<typeof formSchema> | null>(null);
   const [open, setOpen] = useState(false);
 
-  const selectedAnswers = form.watch("answers"); // 🔥 Watching for live changes
 
   const onSubmit = (data: any) => {
     setSubmittedData(data); // Store submitted data
