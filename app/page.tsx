@@ -34,11 +34,11 @@ export default function Home() {
   const [open, setOpen] = useState(false);
 
 
-  const onSubmit = (data: any) => {
-    setSubmittedData(data); // Store submitted data
-    setOpen(true); // Show modal with submitted answers
+  const onSubmit = (data: { answers: Record<string, "Yes" | "No"> }) => {
+    setSubmittedData(data);
+    setOpen(true);
   };
-
+  
   return (
     <div className=" flex flex-col bg-gray-100 h-screen overflow-y-scroll  space-y-4">
       <h2 className="text-xl font-bold mb-4 text-center p-6 bg-pink-500 w-full">Answer Yes or No</h2>
