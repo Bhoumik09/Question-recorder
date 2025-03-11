@@ -57,8 +57,8 @@ export default function Home() {
                     <div className="flex items-center space-x-2">
                       <FormControl>
                         <Checkbox
-                          checked={selectedAnswers?.[question] === "Yes"} // 🔥 Watching state
-                          onCheckedChange={() => form.setValue(`answers.${question}`, "Yes")}
+                          checked={field.value === "Yes"} // 🔥 Watching state
+                          onCheckedChange={() => field.onChange("Yes")}
                         />
                       </FormControl>
                       <span className="text-md">Yes</span>
@@ -66,8 +66,8 @@ export default function Home() {
                     <div className="flex items-center space-x-2">
                       <FormControl>
                         <Checkbox
-                          checked={selectedAnswers?.[question] === "No"} // 🔥 Watching state
-                          onCheckedChange={() => form.setValue(`answers.${question}`, "No")}
+                          checked={field.value === "No"} // 🔥 Watching state
+                          onCheckedChange={() => field.onChange("No")}
                         />
                       </FormControl>
                       <span className="text-md">No</span>
