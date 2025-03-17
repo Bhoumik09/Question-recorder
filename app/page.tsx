@@ -111,7 +111,7 @@ export default function Home() {
 
       {/* Modal for Submitted Answers */}
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent>
+        <DialogContent className="max-w-lg">
           <div className="p-4 space-y-4">
             <DialogHeader>
               <DialogTitle>Your Responses</DialogTitle>
@@ -123,9 +123,8 @@ export default function Home() {
                 ); // Find original question from sanitized key
 
                 return (
-                  <div key={index} className="flex justify-between gap-5">
-                    <span>{originalQuestion || sanitizedKey}</span> {/* Use original question if found */}
-                    <span className="font-bold">{answer}</span>
+                  <div key={index} >
+                      {originalQuestion || sanitizedKey} <span className="font-bold">{answer}</span>
                   </div>
                 );
               })}
